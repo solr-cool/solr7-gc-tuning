@@ -1,0 +1,9 @@
+version: '2.4'
+services:
+  solr:
+    build: .
+    ports:
+      - 8983:8983
+    environment:
+      - GC_TUNE=-XX:+UseG1GC -XX:+PerfDisableSharedMem -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:GCPauseIntervalMillis=250 -XX:+UseLargePages -XX:+AlwaysPreTouch -XX:+ExplicitGCInvokesConcurrent -XX:+UseNUMA -XX:+UseStringDeduplication
+      - ENABLE_REMOTE_JMX_OPTS=true
