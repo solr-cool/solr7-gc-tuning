@@ -1,0 +1,1 @@
+# solr7-gc-tuning
