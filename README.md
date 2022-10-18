@@ -60,7 +60,7 @@ to create applications recordings.
 # take the pid of the first java process as Solr pid
 SOLR_PID=$(pgrep java)
 
-jcmd ${SOLR_PID} JFR.start duration=60s filename=$(hostname)-$(date '+%Y-%m-%d_%H-%M-%S').jfr
+jcmd ${SOLR_PID} JFR.start duration=60s filename=$(hostname)-$(date '+%Y-%m-%d_%H-%M-%S').jfr settings=profile
 ```
 
 3. Transfer the recording file onto your local machine and open it
