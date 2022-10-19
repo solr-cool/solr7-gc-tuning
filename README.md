@@ -30,13 +30,15 @@ ENABLE_REMOTE_JMX_OPTS=true
 GC_TUNE=-XX:+UseG1GC \
     -XX:MaxGCPauseMillis=200 \
     -XX:GCPauseIntervalMillis=250 \
+    -XX:InitiatingHeapOccupancyPercent=20 \
     -XX:+PerfDisableSharedMem \
     -XX:+ParallelRefProcEnabled \
     -XX:+UseLargePages \
     -XX:+AlwaysPreTouch \
     -XX:+ExplicitGCInvokesConcurrent \
     -XX:+UseNUMA \
-    -XX:+UseStringDeduplication
+    -XX:+UseStringDeduplication \
+    -XX:FlightRecorderOptions=stackdepth=256
 ```
 
 You can see the available JVM flags and their defaults using
