@@ -31,6 +31,8 @@ GC_TUNE=-XX:+UseG1GC \
     -XX:MaxGCPauseMillis=200 \
     -XX:GCPauseIntervalMillis=250 \
     -XX:InitiatingHeapOccupancyPercent=20 \
+    -XX:ParallelGCThreads=20 \
+    -XX:ConcGCThreads=7 \
     -XX:+PerfDisableSharedMem \
     -XX:+ParallelRefProcEnabled \
     -XX:+UseLargePages \
